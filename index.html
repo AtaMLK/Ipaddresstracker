@@ -18,30 +18,26 @@
 
   <div class="container">
     <div class="head">
-      <h3 class="title"></h3>
+      <h3 class="title">IP address tracker</h3>
       <img src="/images/pattern-bg-desktop.png" alt="blue-template" class="img-fluid">
-      <input type="search" name="search" class="search-bar">
-      <label for="search">></label>
+      <div class="searchbar"><input type="search" name="search" class="search-bar"
+          placeholder="Search for any IP or domain">
+        <label for="search">></label>
+      </div>
     </div>
     <div class="body">
       <div class="content-box">
-        <span class="content-box_parts ipaddress">ip address</span>
-        <span class="content-box_parts location">location</span>
-        <span class="content-box_parts timezone">timezone</span>
-        <span class="content-box_parts isp">isp</span>
+        <span class="content-box_parts ipaddress"><span>ip address</span></span>
+        <span class="content-box_parts location"><span>location</span></span>
+        <span class="content-box_parts timezone"><span>timezone</span></span>
+        <span class="content-box_parts isp"><span>isp</span></span>
       </div>
       <div class="map"></div>
     </div>
   </div>
-  IP Address Tracker
 
-  Search for any IP address or domain
-
-  IP Address
-  Location
-  Timezone
   UTC <!-- add offset value dynamically using the API -->
-  ISP
+
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

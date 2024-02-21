@@ -4,6 +4,7 @@ $font-family: "Rubik", sans-serif;
 $darkgray: hsl(0, 0%, 17%);
 $lightgray: hsl(0, 0%, 59%);
 $font-size: 18px;
+$uppercase: uppercase;
 
 * {
   margin: 0;
@@ -11,11 +12,95 @@ $font-size: 18px;
   font-family: $font-family;
 }
 
-body{
-    width: 90rem;
-    height: 100%;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  position: relative;
+  .head {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    .title {
+      position: absolute;
+      top: 2rem;
+      font-size: $font-size + 10px;
+      color: #fff;
+      text-transform: capitalize;
+      font-weight: 500;
+    }
+    .searchbar {
+      position: absolute;
+      top: 11rem;
+
+      .search-bar {
+        position: absolute;
+        top: -5rem;
+        left: -15rem;
+        width: 30rem;
+        flex-basis: 30rem;
+        height: 3rem;
+        border-radius: 0.5rem;
+        outline: 0;
+        border: 0;
+        &::placeholder {
+          padding-left: 1rem;
+          font-size: $font-size;
+          color: $lightgray;
+        }
+      }
+      label {
+        position: absolute;
+        text-align: center;
+        top: -5rem;
+        line-height: 3rem;
+        right: -15rem;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0 0.5rem 0.5rem 0;
+        color: #fff;
+        background-color: #000;
+      }
+    }
+  }
+  .body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+      text-transform: $uppercase;
+      top: -6rem;
+      border-radius: 1rem;
+      width: 66rem;
+      height: 10rem;
+      background-color: #fff;
+      .content-box_parts {
+        position: relative;
+        border-right: 1px solid $lightgray;
+        padding-right: 2rem;
+        padding-left: 1rem;
+        height: 40%;
+        font-weight: 700;
+        font-size: $font-size - 6px;
+        letter-spacing: 0.2rem;
+        color: $lightgray;
+        &:nth-child(4) {
+          border-right: 0;
+        }
+        span {
+          padding: 0 7rem 0 1rem;
+        }
+      }
+    }
+  }
 }
