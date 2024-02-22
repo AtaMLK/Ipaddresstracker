@@ -17,10 +17,12 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .container {
   position: relative;
+  width: 100vw;
   .head {
     position: relative;
     display: flex;
@@ -75,6 +77,7 @@ body {
     justify-content: center;
     align-items: center;
     .content-box {
+      position: absolute;
       position: relative;
       display: flex;
       align-items: center;
@@ -101,6 +104,16 @@ body {
           padding: 0 7rem 0 1rem;
         }
       }
+    }
+    #map {
+      position: absolute;
+      z-index: -1;
+      width: 100vw;
+      height: 22rem;
+      left: 0;
+      top: 0;
+      border: 0;
+      outline: 0;
     }
   }
 }

@@ -1,14 +1,12 @@
 {
   "dependencies": {
+    "leaflet": "^1.9.4",
     "parcel": "^2.11.0",
     "sass": "^1.71.1"
   },
   "name": "ip-address-tracker-master",
   "description": "ip tracker",
   "version": "1.0.0",
-  "devDependencies": {
-    
-  },
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"

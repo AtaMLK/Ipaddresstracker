@@ -10,9 +10,11 @@ body {
   justify-content: center;
   align-items: center;
   display: flex;
+  overflow: hidden;
 }
 
 .container {
+  width: 100vw;
   position: relative;
 }
 
@@ -106,6 +108,17 @@ body {
 
 .container .body .content-box .content-box_parts span {
   padding: 0 7rem 0 1rem;
+}
+
+.container .body #map {
+  z-index: -1;
+  border: 0;
+  outline: 0;
+  width: 100vw;
+  height: 22rem;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /*# sourceMappingURL=index.608029e9.css.map */

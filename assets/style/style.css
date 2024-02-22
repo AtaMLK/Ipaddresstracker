@@ -10,10 +10,12 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .container {
   position: relative;
+  width: 100vw;
 }
 .container .head {
   position: relative;
@@ -69,6 +71,7 @@ body {
   align-items: center;
 }
 .container .body .content-box {
+  position: absolute;
   position: relative;
   display: flex;
   align-items: center;
@@ -95,4 +98,14 @@ body {
 }
 .container .body .content-box .content-box_parts span {
   padding: 0 7rem 0 1rem;
+}
+.container .body #map {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 22rem;
+  left: 0;
+  top: 0;
+  border: 0;
+  outline: 0;
 }/*# sourceMappingURL=style.css.map */
