@@ -1,11 +1,36 @@
 "use strict";
-/* 
-const { LatLng } = require("leaflet"); */
 
-let myLocation = navigator.geolocation;
-console.log(myLocation);
+/* ================== Variables ================== */
+const ipAddress = document.querySelector(".ipaddress");
+const ipLocation = document.querySelector(".location");
+const utcTimezone = document.querySelector(".timezone");
+const ispName = document.querySelector(".isp");
+const serachedIp = document.querySelector(".search-bar");
+const searchedButton = document.querySelector(".search-btn");
 
-let map = L.map("map").setView([myLocation.lat, myLocation.lng], 13);
+const API_KEY = "at_wsS8PAPWhRErLBy942MlMMFermjPj";
+const postitionCoords = [];
+const data = [];
+/* ================== User Location Finder ================== */
+navigator.geolocation.getCurrentPosition(function locationFinder(pos) {
+  postitionCoords[0] = pos.coords.latitude;
+  postitionCoords[1] = pos.coords.longitude;
+  postitionCoords[2] = pos.coords.accuracy;
+});
+/* ================== API reader  ================== */
+async function ipadress() {
+  const response = await fetch(
+    `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}`
+  ); /* .then(response=> response.json()) */
+  const data = await response.json();
+  console.log(data);
+  if (!data) {
+    throw new Error(`${response.status} : ${await response.statusText()}`);
+  }
+}
+/* ipadress(); */
+/* ================== MAP  ================== */
+let map = L.map("map").setView([41.01526, 28.9597], 15);
 
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
@@ -13,18 +38,5 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
 
-//additional options that can placed on the map
-/* var marker = L.marker([51.5, -0.09]).addTo(map);
-
-var circle = L.circle([51.508, -0.11], {
-  color: "red",
-  fillColor: "#f03",
-  fillOpacity: 0.5,
-  radius: 500,
-}).addTo(map);
-
-var polygon = L.polygon([
-  [51.509, -0.08],
-  [51.503, -0.06],
-  [51.51, -0.047],
-]).addTo(map); */
+/* ================== MAP  Options ================== */
+L.marker([41.01526, 28.9597]).addTo(map).bindPopup("here you are").openPopup();
