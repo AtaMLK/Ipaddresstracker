@@ -20,30 +20,40 @@
 </head>
 
 <body>
-
   <div class="container">
     <!-- ================== HEADER ================== -->
     <div class="head">
       <h3 class="title">IP address tracker</h3>
       <img src="/images/pattern-bg-desktop.png" alt="blue-template" class="top-bg-image">
-      <div class="searchbar"><input type="search" name="search" class="search-bar"
-          placeholder="Search for any IP or domain">
+      <div class="searchbar">
+        <input type="search" name="search" class="search-bar" placeholder="Search for any IP or domain">
         <label for="search" class="search-btn">></label>
       </div>
     </div>
     <!-- ================== IP DETAILS ================== -->
     <div class="body">
       <div class="content-box">
-        <span class="content-box_parts ipaddress"><span>ip address</span></span>
-        <span class="content-box_parts location"><span>location</span></span>
-        <span class="content-box_parts timezone"><span>timezone</span></span>
-        <span class="content-box_parts isp"><span>isp</span></span>
+        <div class="content-box_parts ">
+          <div class="content-parts_title">ip address</div>
+          <span class="ipaddress"></span>
+        </div>
+        <div class="content-box_parts ">
+          <div class="content-parts_title">location</div>
+          <span class="location"></span>
+        </div>
+        <div class="content-box_parts ">
+          <div class="content-parts_title">timezone</div>
+          <span class="timezone"></span>
+        </div>
+        <div class="content-box_parts ">
+          <div class="content-parts_title">isp</div>
+          <span class="isp"></span>
+        </div>
       </div>
       <!-- ================== MAP PREVIEW ================== -->
       <div id="map"></div>
     </div>
   </div>
-
   <!-- add offset value dynamically using the API -->
   <script src="app.js"></script>
 </body>

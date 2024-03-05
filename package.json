@@ -1,16 +1,15 @@
 {
   "dependencies": {
     "leaflet": "^1.9.4",
-    "parcel": "^2.11.0",
+    "parcel": "^2.12.0",
     "sass": "^1.71.1"
   },
   "name": "ip-address-tracker-master",
   "description": "ip tracker",
   "version": "1.0.0",
-  "default": " index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html ../dist/index.html"
+    "build": "parcel build index.html"
   },
   "author": "ataMLK",
   "license": "ISC"

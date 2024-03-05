@@ -10,18 +10,19 @@ body {
   justify-content: center;
   align-items: center;
   display: flex;
-  overflow: hidden;
 }
 
 .container {
   width: 100vw;
-  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .container .head {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   display: flex;
   position: relative;
 }
@@ -36,39 +37,48 @@ body {
 }
 
 .container .head .searchbar {
-  position: absolute;
-  top: 11rem;
+  display: inline-flex;
+  position: relative;
+  top: -11rem;
 }
 
 .container .head .searchbar .search-bar {
   border: 0;
-  border-radius: .5rem;
+  border-radius: 1rem;
   outline: 0;
   flex-basis: 30rem;
-  width: 30rem;
-  height: 3rem;
-  position: absolute;
-  top: -5rem;
-  left: -15rem;
+  width: 32rem;
+  height: 3.5rem;
+  padding-inline-start: 1rem;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .container .head .searchbar .search-bar::placeholder {
   color: #969696;
   padding-left: 1rem;
   font-size: 18px;
+  font-weight: 400;
 }
 
 .container .head .searchbar label {
-  text-align: center;
   color: #fff;
   background-color: #000;
-  border-radius: 0 .5rem .5rem 0;
-  width: 3rem;
-  height: 3rem;
-  line-height: 3rem;
+  border-radius: 0 1rem 1rem 0;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  transition: all .5s;
+  display: flex;
   position: absolute;
-  top: -5rem;
-  right: -15rem;
+  right: 2rem;
+}
+
+.container .head .searchbar label:hover {
+  cursor: pointer;
+  background-color: #2b2b2b;
+  font-weight: 700;
 }
 
 .container .body {
@@ -76,18 +86,20 @@ body {
   align-items: center;
   display: flex;
   position: relative;
+  top: -3.5rem;
 }
 
 .container .body .content-box {
+  justify-content: none;
   text-transform: uppercase;
   background-color: #fff;
   border-radius: 1rem;
   align-items: center;
-  width: 66rem;
-  height: 10rem;
+  width: 60rem;
+  height: 9rem;
   display: flex;
-  position: relative;
-  top: -6rem;
+  position: absolute;
+  z-index: 10 !important;
 }
 
 .container .body .content-box .content-box_parts {
@@ -96,7 +108,6 @@ body {
   border-right: 1px solid #969696;
   height: 40%;
   padding-left: 1rem;
-  padding-right: 2rem;
   font-size: 12px;
   font-weight: 700;
   position: relative;
@@ -111,14 +122,13 @@ body {
 }
 
 .container .body #map {
-  z-index: -1;
+  z-index: 0;
   border: 0;
   outline: 0;
   width: 100vw;
-  height: 22rem;
+  height: 23.2rem;
   position: absolute;
   top: 0;
   left: 0;
 }
-
 /*# sourceMappingURL=index.608029e9.css.map */

@@ -6,26 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.654148d5.png">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""><!-- Make sure you put this AFTER Leaflet's CSS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <!-- ================== STYLES ================== -->
   <link rel="stylesheet" href="/index.608029e9.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.654148d5.png">
 
+  <!-- ================== LEAFLET CSS ================== -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <!-- ================== LEAFLET JS ================== -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <title> IP Address Tracker</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 
 <body>
 
   <div class="container">
+    <!-- ================== HEADER ================== -->
     <div class="head">
       <h3 class="title">IP address tracker</h3>
-      <img src="/pattern-bg-desktop.f3dceb42.png" alt="blue-template" class="img-fluid">
+      <img src="/pattern-bg-desktop.f3dceb42.png" alt="blue-template" class="top-bg-image">
       <div class="searchbar"><input type="search" name="search" class="search-bar" placeholder="Search for any IP or domain">
-        <label for="search">></label>
+        <label for="search" class="search-btn">></label>
       </div>
     </div>
+    <!-- ================== IP DETAILS ================== -->
     <div class="body">
       <div class="content-box">
         <span class="content-box_parts ipaddress"><span>ip address</span></span>
@@ -33,11 +36,12 @@
         <span class="content-box_parts timezone"><span>timezone</span></span>
         <span class="content-box_parts isp"><span>isp</span></span>
       </div>
+      <!-- ================== MAP PREVIEW ================== -->
       <div id="map"></div>
     </div>
   </div>
 
-  UTC <!-- add offset value dynamically using the API -->
+  <!-- add offset value dynamically using the API -->
   <script src="/index.7c0ccee6.js"></script>
 <script src="/ip-address-tracker-master.3464ddca.js"></script></body>
 
